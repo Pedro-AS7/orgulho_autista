@@ -1,0 +1,263 @@
+/* --- Reset Básico e Importação da Fonte --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    background-color: #f0f4f8; /* Cinza azulado de fundo */
+    color: #333a45;
+}
+
+p { 
+    text-align: justify;
+}
+
+#names {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.site-header {
+    position: relative;
+}
+
+.styled-list {
+    margin-left: 15px;
+}
+
+/* --- Container Principal --- */
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Cabeçalho e Navegação (Novo Estilo) --- */
+.site-header {
+    
+    width: 250px;
+    background-color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #dee5ec;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #005A9C; /* Azul Primário */
+}
+
+.logo span {
+    color: #00BFFF; /* Azul vibrante */
+    font-weight: 600;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.nav-div {
+    margin-top: 10px;
+    padding: 5px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00BFFF; /* Azul vibrante */
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px rgba(0, 90, 156, 0.1);
+    text-align: center;
+}
+
+.nav-div:hover {
+    transform: scale(1.05);
+}
+
+.main-nav a {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #ffffff; /* Branco */
+    font-weight: 600;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+#active {
+    color: #016181; /* Azul vibrante */
+}
+#nav-active:hover {
+    transform: scale(1);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    transform: scale(1.1rem, 1.1rem);
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    gap: 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* --- Conteúdo Principal (Novo Estilo) --- */
+.main-content {
+    /* Margens laterais de 15% */
+    margin: 3rem 15%; 
+    padding: 0; /* Removido padding para dar espaço aos blocos */
+}
+
+.content-block {
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 90, 156, 0.05);
+    margin-bottom: 2rem;
+}
+
+.content-block.hero {
+    background-color: #005A9C;
+    color: #ffffff;
+    text-align: center;
+}
+
+.content-block.hero h1 {
+    color: #ffffff;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #005A9C;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #00BFFF;
+    display: inline-block;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Layouts de Grid e Estilos de Lista (Novo Estilo) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-item {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 5px solid #00BFFF;
+}
+
+.grid-item h3 {
+    color: #005A9C;
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.info-list li:last-child {
+    border: none;
+}
+
+.info-list li::before {
+    content: '→';
+    color: #00BFFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    line-height: 1.4;
+}
+
+.card {
+    border-bottom:  #00bfff 3px solid;
+    background-color: #00bfff1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 90, 156, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#famosos-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2rem;
+}   
+
+.famoso-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    width: 100%;
+    background-color: #00bfff1e;
+    border: 1px solid #dee5ec;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.137);
+}
+
+.famoso-card p {
+    margin-right: 10px;
+}
+
+
